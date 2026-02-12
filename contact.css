@@ -1,0 +1,107 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background: #0f0f0f;
+  color: white;
+  padding: 60px;
+}
+
+/* Logo */
+.logo {
+  font-size: 32px;
+  font-weight: 900;
+  margin-bottom: 60px;
+}
+
+.logo span {
+  color: #fbbf24;
+}
+
+/* Section */
+.reservation h3 {
+  text-align: center;
+  font-size: 36px;
+  margin-bottom: 60px;
+  color: #fbbf24;
+}
+
+/* Grid */
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+/* Infos */
+.infos h4 {
+  font-size: 24px;
+  margin-bottom: 16px;
+}
+
+.desc {
+  opacity: 0.8;
+  margin-bottom: 20px;
+}
+
+.details p {
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+
+/* Form */
+.form {
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.1);
+  padding: 40px;
+  border-radius: 20px;
+}
+
+.form input,
+.form textarea {
+  width: 100%;
+  background: rgba(0,0,0,0.6);
+  border: 1px solid rgba(255,255,255,0.2);
+  padding: 12px;
+  border-radius: 10px;
+  margin-bottom: 16px;
+  color: white;
+  outline: none;
+}
+
+.form input:focus,
+.form textarea:focus {
+  border-color: #fbbf24;
+}
+
+/* Button */
+.form button {
+  width: 100%;
+  padding: 14px;
+  border-radius: 50px;
+  border: none;
+  font-weight: bold;
+  background: linear-gradient(90deg, #fbbf24, #f97316);
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.form button:hover {
+  transform: scale(1.05);
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  body {
+    padding: 20px;
+  }
+}

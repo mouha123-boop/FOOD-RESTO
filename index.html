@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">                                               
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mode Sombre / Clair</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class'
+    }
+  </script>
+</head>
+<body class="bg-white text-black transition-colors duration-500">
+
+  <header class="flex justify-between items-center p-6 bg-gray-100 dark:bg-gray-900 transition-colors duration-500">
+    <h1 class="text-2xl font-bold">Ma Page Web</h1>
+    
+    <button id="toggle" class="px-4 py-2 rounded border border-black dark:border-white bg-white dark:bg-black text-black dark:text-white transition">
+      🌙 / ☀️
+    </button>
+  </header>
+
+  <main class="p-10">
+    <h2 class="text-3xl font-bold mb-4">Bonjour !</h2>
+    <p class="opacity-80">
+      Ceci est un exemple de page web où vous pouvez basculer entre mode clair et sombre en cliquant sur le bouton.
+    </p>
+  </main>
+
+  <footer class="text-center py-6 bg-gray-200 dark:bg-gray-900 text-black dark:text-white transition-colors duration-500">
+    © 2026 - Mon site
+  </footer>
+
+  <!-- SCRIPT BOUTON -->
+  <script>
+    const html = document.documentElement;
+    const btn = document.getElementById('toggle');
+
+    btn.addEventListener('click', () => {
+      html.classList.toggle('dark');  // ajoute/enlève la classe dark
+    });
+  </script>
+
+</body>
+</html>

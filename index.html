@@ -1,46 +1,103 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">                                               
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mode Sombre / Clair</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      darkMode: 'class'
-    }
-  </script>
+  <meta charset="UTF-8">
+  <title>KOOD'S FOOD</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600;900&display=swap" rel="stylesheet">
 </head>
-<body class="bg-white text-black transition-colors duration-500">
+<body>
 
-  <header class="flex justify-between items-center p-6 bg-gray-100 dark:bg-gray-900 transition-colors duration-500">
-    <h1 class="text-2xl font-bold">Ma Page Web</h1>
-    
-    <button id="toggle" class="px-4 py-2 rounded border border-black dark:border-white bg-white dark:bg-black text-black dark:text-white transition">
-      🌙 / ☀️
-    </button>
-  </header>
+<section class="hero">
+  <div class="overlay"></div>
 
-  <main class="p-10">
-    <h2 class="text-3xl font-bold mb-4">Bonjour !</h2>
-    <p class="opacity-80">
-      Ceci est un exemple de page web où vous pouvez basculer entre mode clair et sombre en cliquant sur le bouton.
+  <nav class="nav">
+    <h1>KOOD'S <span>FOOD</span></h1>
+    <ul>
+      <li><a href="accueil.html">Accueil</a></li>
+      <li><a href="menu.html">Menu</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <div class="hero-content">
+    <h2>La cuisine africaine<br><span>autrement</span></h2>
+    <p>Goûtez la différence</p>
+    <a href="menu.html" class="btn">Découvrir le menu</a>
+  </div>
+</section>
+
+<section class="about">
+  <div class="about-text">
+    <h3>À propos du restaurant</h3>
+    <p>
+      KOOD'S FOOD est né d'un rêve : faire voyager l'Afrique dans chaque assiette.
+      Des recettes traditionnelles revisitées avec élégance.
     </p>
-  </main>
 
-  <footer class="text-center py-6 bg-gray-200 dark:bg-gray-900 text-black dark:text-white transition-colors duration-500">
-    © 2026 - Mon site
-  </footer>
+    <div class="stats">
+      <div>
+        <h4>5 ans</h4>
+        <p>Expérience</p>
+      </div>
+      <div>
+        <h4>20k+</h4>
+        <p>Clients</p>
+      </div>
+      <div>
+        <h4>100%</h4>
+        <p>Saveurs</p>
+      </div>
+    </div>
+  </div>
 
-  <!-- SCRIPT BOUTON -->
-  <script>
-    const html = document.documentElement;
-    const btn = document.getElementById('toggle');
+  <div class="about-img">
+    <img src="OIP.webp" alt="">
+    <span>La tradition rencontre le futur</span>
+  </div>
+</section>
 
-    btn.addEventListener('click', () => {
-      html.classList.toggle('dark');  // ajoute/enlève la classe dark
-    });
-  </script>
+<section class="special">
+  <h3>Nos Spécialités</h3>
+  <div class="cards">
+    <div class="card">
+      <h4>Thiéboudienne</h4>
+      <p>Riz parfumé, poisson, légumes</p>
+    </div>
+    <div class="card">
+      <h4>Yassa Poulet</h4>
+      <p>Citron, oignons, grillé</p>
+    </div>
+    <div class="card">
+      <h4>Mafé</h4>
+      <p>Sauce arachide crémeuse</p>
+    </div>
+  </div>
+</section>
+
+<section class="reservation">
+  <h3>Réservation</h3>
+  <div class="res-grid">
+    <div class="info">
+      <p>📍 Dakar, Sénégal</p>
+      <p>📞 +221 77 123 45 67</p>
+      <p>⏰ 11h - 23h</p>
+      <p>⏰ Lun - Dim : 11h00 - 23h00</p>
+    </div>
+
+    <form class="form">
+      <input type="text" placeholder="Nom">
+      <input type="email" placeholder="Email">
+      <input type="text" placeholder="Téléphone">
+      <textarea placeholder="Message"></textarea>
+      <button>Envoyer</button>
+    </form>
+  </div>
+</section>
+
+<footer>
+  © 2025 KOOD'S FOOD — Dakar
+</footer>
 
 </body>
 </html>
